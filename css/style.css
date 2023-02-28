@@ -7,6 +7,11 @@ body {
   width: 100%;
   margin: auto;
 }
+:root{
+  --blue: #0065FC;
+  --lightgrey: #F2F2F2;
+  --lightblue: #DEEBFF;
+}
 
 ul li {
   list-style: none;
@@ -37,12 +42,12 @@ nav a {
 }
 
 nav a:hover {
-  border-top: 3px solid  #0065FC;
+  border-top: 3px solid var(--blue);
   padding-top: 20px;
 }
 
 .nav-item a:hover {
-  color:  #0065FC;
+  color:  var(--blue);
 
 }
 
@@ -65,3 +70,101 @@ nav a:hover {
   font-weight: 300;
   margin-top: 20px;
 }
+/* form search */
+
+.contain-search {
+  display: inline-flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.icon-localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: auto;
+  background-color: var(--lightgrey);
+  border-radius: 14px 0 0 14px;
+}
+
+.fa-map-marker-alt {
+  font-size: 17px;
+}
+
+.search-input {
+  padding: 0 0 0 20px;
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-top: solid 1px var(--lightgrey);
+  border-bottom: solid 1px var(--lightgrey);
+}
+
+.search-input::placeholder {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button-search {
+  border: none;
+  border-radius: 0 14px 14px 0;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  background-color: #003c96;
+  transition: ease 0.3s;
+}
+
+/* filters */
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.filter-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.filter-list span {
+  font-weight: bold;
+}
+
+.filter-list {
+  border: 2px solid var(--lightgrey);
+  border-radius: 30px;
+  padding: 13px;
+  width: 150px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.filter-dog {
+  border: 2px solid var(--lightgrey);
+  border-radius: 30px;
+  padding: 13px;
+  width: 200px;
+  margin-right: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.filtre-icone {
+  color: var(--blue);
+  padding-right: 5px;
+}
+
+
