@@ -6,17 +6,16 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: auto;
+  Justify-content: center;
 }
 
 header {
   width: 98%;
-  max-width: 1440px;
   margin: auto;
 }
 
 main {
   width: 98%;
-  max-width: 1440px;
   margin: auto;
 }
 
@@ -299,10 +298,15 @@ nav a:hover {
   background: #fff;
   border-radius: 20px;
   padding: 3px;
-  margin-bottom: 40px;
+  display: flex;
+  margin: 0 auto 40px;
   width: 80%;
   height: 125px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.populaire-contain-card a {
+  display: flex;
 }
 
 .populaire-contain-card:hover {
@@ -311,17 +315,27 @@ nav a:hover {
   top: -4px;
   background-color: white;
 }
-.populaire-contain-card.populaire-card img {
-  height: 100%;
-  border-radius: 20px 0 0 20px;
-  width: 38%;
-  margin-right: 5px;
-  object-fit: cover;
-}
 
 .populaire-card {
-  display: flex;
-  margin: 0 auto 50px;
+  width:150px;
+  height: auto;
+  overflow: hidden;
+}
+
+.populaire-card.card-star {
+  margin-top: auto;
+}
+
+.populaire-card img {
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+  height: 100%;
+  object-position: top;
+}
+
+.populaire-info-contain {
+padding: 0 10px 10px 10px;
+box-sizing: border-box;
 }
 
 .contain-populaire {
@@ -332,17 +346,25 @@ nav a:hover {
 .populaire-description {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.populaire-description h3,
+.populaire-description p{
+  margin-top: 2px;
+}
+.populaire-description p {
+  padding-bottom: 37px;
+
 }
 
-.populaire-description p,
 .populaire-description h3 {
-  margin: 2px;
-}
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
 
-.populaire-card .card-star {
-  margin-top: auto;
 }
-
 /* activte*/
 .activite-title {
   margin-left: 40px;
@@ -394,3 +416,66 @@ footer {
 .link-footer {
   padding-bottom: 6px;
 }
+
+
+/* tablette */
+
+@media screen and (max-width: 1157px) {
+  .populaire-description p,
+  .populaire-description h3,
+  .hebergement-card p,
+  .hebergement-card h3 {
+    font-size: 0.9rem;
+  }
+}
+
+ @media screen and (max-width: 1024px) {
+  .contain-appart {
+     flex-direction: column;
+  }
+  .populaires {
+    flex-basis: 100%;
+    margin: 0 0 100px 0;
+  }
+  .populaire-tablette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .populaire-contain-card {
+    width: 30%;
+    min-width: 236px;
+  }
+  .populaire-description p,
+  .populaire-description h3 {
+    font-size: 0.9rem;
+    padding-top: 0.3rem;
+    padding-bottom:0;
+  }
+  .contain-activities {
+    flex-direction: row;
+    width: 100%;
+  }
+  .card-activities img {
+    width: 200px;
+    height:300px;
+    gap: 20px;
+  } 
+  .card-activities  {
+  height: auto;
+  width: 100%;
+    gap: 10px;
+  }
+
+}
+
+@media screen and (max-width: 930px) {
+  .filter-list {
+    width: 140px;
+  }
+
+  #dog {
+    width: 180px;
+  }
+}
+ 
