@@ -6,7 +6,7 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  Justify-content: center;
+  justify-content: center;
 }
 
 header {
@@ -60,7 +60,7 @@ nav a {
 
 nav a:hover {
   border-top: 3px solid var(--blue);
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .nav-item a:hover {
@@ -90,7 +90,7 @@ nav a:hover {
 /* form search */
 
 .contain-search {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   margin-top: 15px;
   margin-bottom: 35px;
@@ -119,13 +119,37 @@ nav a:hover {
   border-bottom: solid 1px var(--lightgrey);
 }
 
+.search-input::-webkit-input-placeholder {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search-input::-moz-placeholder {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search-input:-ms-input-placeholder {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search-input::-ms-input-placeholder {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .search-input::placeholder {
   color: #000;
   font-size: 16px;
   font-weight: 600;
 }
 
-.button-search {
+#button-search {
   border: none;
   border-radius: 0 14px 14px 0;
   background-color: var(--blue);
@@ -136,11 +160,21 @@ nav a:hover {
   cursor: pointer;
 }
 
-.button-search:hover {
+#button-search:hover {
   background-color: #003c96;
   transition: ease 0.3s;
 }
-
+#mobile {
+  display: none;
+  border: none;
+  border-radius: 0 14px 14px 0;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px;
+  cursor: pointer;
+}
 /* filters */
 
 .filter {
@@ -167,10 +201,6 @@ nav a:hover {
   width: 150px;
   margin-right: 20px;
   text-align: center;
-}
-
-#dog {
-  width: 200px;
 }
 
 .filtre-icone {
@@ -224,7 +254,8 @@ nav a:hover {
 
 .hebergement-card img {
   border-radius: 17px 17px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 120px;
 }
 
@@ -317,7 +348,7 @@ nav a:hover {
 }
 
 .populaire-card {
-  width:150px;
+  width: 150px;
   height: auto;
   overflow: hidden;
 }
@@ -328,14 +359,16 @@ nav a:hover {
 
 .populaire-card img {
   border-radius: 20px 0px 0px 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
-  object-position: top;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .populaire-info-contain {
-padding: 0 10px 10px 10px;
-box-sizing: border-box;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
 }
 
 .contain-populaire {
@@ -350,20 +383,14 @@ box-sizing: border-box;
   justify-content: space-between;
   padding-left: 10px;
 }
-.populaire-description h3,
-.populaire-description p{
-  margin-top: 2px;
-}
-.populaire-description p {
-  padding-bottom: 37px;
-
+.populaire-info h3 {
+  padding: 5px 0 10px 0;
 }
 
-.populaire-description h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
+.populaire-info p,
+.populaire-info h3 {
+  font-size: 1rem;
   margin: 0;
-
 }
 /* activte*/
 .activite-title {
@@ -391,7 +418,8 @@ box-sizing: border-box;
 }
 
 .card-activities img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 400px;
   border-radius: 20px 20px 0 0;
 }
@@ -417,7 +445,6 @@ footer {
   padding-bottom: 6px;
 }
 
-
 /* tablette */
 
 @media screen and (max-width: 1157px) {
@@ -429,9 +456,13 @@ footer {
   }
 }
 
- @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  .filter-title {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
   .contain-appart {
-     flex-direction: column;
+    flex-direction: column;
   }
   .populaires {
     flex-basis: 100%;
@@ -448,34 +479,144 @@ footer {
   }
   .populaire-description p,
   .populaire-description h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-top: 0.3rem;
-    padding-bottom:0;
+    padding-bottom: 0;
   }
   .contain-activities {
-    flex-direction: row;
-    width: 100%;
+    gap: 30px;
   }
   .card-activities img {
-    width: 200px;
-    height:300px;
-    gap: 20px;
-  } 
-  .card-activities  {
-  height: auto;
-  width: 100%;
-    gap: 10px;
+    height: 200px;
   }
 
+  .activities-title {
+    font-size: 0.9em;
+    padding: 0 5px;
+  }
+  .card-activities {
+    height: auto;
+    width: 100%;
+  }
+
+  .hebergement {
+    margin: 0 0 50px 0;
+  }
 }
 
 @media screen and (max-width: 930px) {
-  .filter-list {
-    width: 140px;
+  .filter {
+    flex-wrap: nowrap;
   }
 
   #dog {
     width: 180px;
   }
 }
- 
+
+/* CSS pour iPad Air ici */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .sub-nav a {
+    flex-basis: 50%;
+    text-align: center;
+    border-bottom: 3px solid var(--lightgrey);
+    padding-bottom: 10px;
+  }
+
+  .sub-nav a:hover {
+    border-color: var(--blue);
+    border-top-color: transparent;
+  }
+  .populaires {
+    border-radius: 0;
+  }
+  .show-more {
+    display: none;
+  }
+  .search-input {
+    padding: 0 10px;
+    width: 100%;
+    border-top: solid 2px var(--lightgrey);
+    border-bottom: solid 2px var(--lightgrey);
+  }
+  .contain-appart {
+    flex-direction: column-reverse;
+  }
+  #button-search {
+    display: none;
+  }
+
+  #mobile {
+    display: initial;
+  }
+
+  .icon-localisation {
+    width: 80px;
+  }
+  .logo {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .filter-title {
+    width: 100%;
+  }
+
+  .filter {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-list {
+    font-size: 0.8rem;
+    width: 135px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .title {
+    text-align: center;
+  }
+  .sub-title {
+    text-align: center;
+  }
+
+  .contain-search {
+    margin: 30px auto 35px;
+    padding: 0 10px 0 10px;
+  }
+
+  .contain-activities {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 15px;
+  }
+  .card-activities {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .populaires {
+    margin-bottom: 50px;
+  }
+  .hebergement {
+    background-color: #fff;
+    border-radius: 0;
+  }
+  .hebergement-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-color {
+    flex-direction: column;
+  }
+  .info-footer {
+    padding: 20px;
+  }
+  .populaire-tablette {
+    flex-direction: column;
+  }
+}
