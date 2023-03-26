@@ -461,12 +461,20 @@ footer {
     font-size: 1rem;
     margin-right: 5px;
   }
+
+  .filter-list {
+    width: auto;
+  }
   .contain-appart {
     flex-direction: column;
   }
   .populaires {
     flex-basis: 100%;
     margin: 0 0 100px 0;
+  }
+
+  .populaire-title {
+    padding: 30px 20px 0px 20px;
   }
   .populaire-tablette {
     display: flex;
@@ -527,6 +535,7 @@ footer {
     border-color: var(--blue);
     border-top-color: transparent;
   }
+
   .populaires {
     border-radius: 0;
   }
