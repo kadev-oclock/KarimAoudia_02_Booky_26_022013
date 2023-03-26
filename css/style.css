@@ -594,7 +594,9 @@ footer {
     width: 100%;
     margin-bottom: 20px;
   }
-
+  .populaire-contain-card {
+    width: 90%;
+  }
   .populaires {
     margin-bottom: 50px;
   }
