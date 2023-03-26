@@ -255,7 +255,7 @@ nav a:hover {
 .hebergement-card img {
   border-radius: 17px 17px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 120px;
 }
 
@@ -360,10 +360,10 @@ nav a:hover {
 .populaire-card img {
   border-radius: 20px 0px 0px 20px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
 }
 
 .populaire-info-contain {
@@ -419,7 +419,7 @@ nav a:hover {
 
 .card-activities img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 400px;
   border-radius: 20px 20px 0 0;
 }
@@ -512,10 +512,6 @@ footer {
   #dog {
     width: 180px;
   }
-}
-
-/* CSS pour iPad Air ici */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Mobile */
