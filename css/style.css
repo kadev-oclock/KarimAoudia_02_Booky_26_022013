@@ -233,6 +233,8 @@ button {
 
 .info {
   margin: 20px 0 50px 0;
+  display: flex;
+  align-items: baseline;
 }
 
 /* hebergement */
@@ -322,7 +324,11 @@ button {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 30px 50px 0px 50px;
+  padding: 55px 50px 0px 50px;
+}
+
+.populaire-title {
+  padding-bottom: 10px;
 }
 
 .populaires {
@@ -452,11 +458,15 @@ footer {
 .footer-color {
   background-color: var(--lightgrey);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .info-footer {
-  width: 33.33%;
   padding: 20px 0 20px 20px;
+}
+
+.info-footer h3 {
+  font-size: 1.2rem;
+  padding: 0 0 10px 0;
 }
 .link-footer {
   padding-bottom: 6px;
@@ -602,7 +612,7 @@ footer {
 
   .filter-list {
     font-size: 0.8rem;
-    width:40%;
+    width: 42%;
     margin-bottom: 10px;
     text-align: left;
   }
@@ -639,9 +649,9 @@ footer {
     background-color: #fff;
     border-radius: 0;
   }
-  .hebergement h2{
-   margin: 0;
-   width: 100%;
+  .hebergement h2 {
+    margin: 0;
+    width: 100%;
   }
   .hebergement-card {
     width: 100%;
@@ -656,15 +666,20 @@ footer {
   .populaire-tablette {
     flex-direction: column;
   }
+  .hebergement h2 {
+    margin-left: 15px;
+    font-size: 1.3rem;
+  }
 }
 
-@media screen and (max-width:376px) {
-.filter{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-nav a {
-  padding: 0 2rem;
-}
+@media screen and (max-width: 376px) {
+  .filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 0 2rem;
+  }
+
 }
