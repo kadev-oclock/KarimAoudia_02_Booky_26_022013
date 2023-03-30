@@ -577,7 +577,6 @@ footer {
   }
   .search-input {
     padding: 0 10px;
-    width: 100%;
     border-top: solid 2px var(--lightgrey);
     border-bottom: solid 2px var(--lightgrey);
   }
